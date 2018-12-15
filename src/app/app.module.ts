@@ -4,11 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GoogleSignInComponent } from './google-sign-in/google-sign-in.component';
+import { WebUnitListComponent } from './web-unit-list/web-unit-list.component';
+import { WebUnitEditComponent } from './web-unit-edit/web-unit-edit.component';
+import { ProfileComponent } from './profile/profile.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GoogleSignInComponent
+    GoogleSignInComponent,
+    WebUnitListComponent,
+    WebUnitEditComponent,
+    ProfileComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
