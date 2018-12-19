@@ -8,6 +8,7 @@ import { WebUnitListComponent } from './web-unit-list/web-unit-list.component';
 import { WebUnitEditComponent } from './web-unit-edit/web-unit-edit.component';
 import { ProfileComponent } from './profile/profile.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { WelcomeComponent } from './welcome/welcome.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     WebUnitListComponent,
     WebUnitEditComponent,
     ProfileComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    WelcomeComponent
   ],
   imports: [
     BrowserModule,

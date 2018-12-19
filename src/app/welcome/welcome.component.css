@@ -1,0 +1,48 @@
+
+.welcome-container{
+    height: 100vh;
+}
+
+.welcome-content{
+    margin: auto;
+    /* min-width: 250px; */
+    /* max-width: 500px; */
+    
+    height: 600px;
+    width: 800px;
+    position: relative;
+    top: 15%;
+}
+
+.icon{
+   width: 400px;
+   position: relative;
+   left: 25%;
+}
+
+.next{
+    position: relative;
+    width: 64px;
+    left: 47%;
+    cursor: pointer;
+}
+
+.next:hover{
+    width: 70px;
+}
+
+.next:active {
+    width: 60px;
+  }
+
+.welcome-title{
+    font-size: 50px;
+    color: white;
+    position: relative;
+    left: 40%;
+}
+.intro{
+    color: white;
+    position: relative;
+    left: 45%;
+}
