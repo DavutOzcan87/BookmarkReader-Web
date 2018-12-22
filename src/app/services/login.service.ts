@@ -8,8 +8,18 @@ export class LoginService {
     return false;
   }
 
-  constructor() 
-  {
+  constructor() {
 
   }
+
+  getLoginedUser(): User {
+    return JSON.parse(localStorage.getItem('googleProfile'));
+  }
+}
+
+
+export class User {
+  id: string;
+  email: string;
+  imageUrl: string;
 }

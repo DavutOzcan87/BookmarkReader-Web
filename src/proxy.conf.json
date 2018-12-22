@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "http://185.52.2.180:3000/",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  }
+}
