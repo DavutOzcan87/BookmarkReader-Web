@@ -1,3 +1,9 @@
-<p>
-  web-unit-list works!
-</p>
+<ul class="bookmarks">
+  <li *ngFor="let bm of model.bookmarks">
+    <a>
+      <span class="badge">{{bm}}</span> {{bm}}
+    </a>
+    <button class="delete" title="delete bookmark"
+      (click)="delete(bm)">x</button>
+  </li>
+</ul>
