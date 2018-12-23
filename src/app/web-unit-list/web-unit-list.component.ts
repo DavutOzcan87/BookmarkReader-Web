@@ -29,7 +29,7 @@ export class WebUnitListComponent implements OnInit {
     console.log('called bookmark delete');
     const index = this.model.bookmarks.indexOf(bookmark);
     if(index >= 0) {
-      this.model.bookmarks.slice(index , 1);
+      this.model.bookmarks.splice(index , 1);
     }
   }
 
