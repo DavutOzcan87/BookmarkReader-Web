@@ -1,9 +1,12 @@
-<ul class="bookmarks">
-  <li *ngFor="let bm of model.bookmarks; let index=index">
-    <a routerLink="/welcome" routerLinkActive="active">
-      <span class="badge">{{index+1}}</span> {{bm}}
-    </a>
-    <button class="delete" title="delete bookmark"
-      (click)="delete(bm)">x</button>
-  </li>
-</ul>
+<div class="list-container">
+  <ul class="bookmarks">
+    <li *ngFor="let bm of model.bookmarks; let index=index">
+      <a routerLink="/welcome" routerLinkActive="active">
+        <span class="badge">{{index+1}}</span> {{bm}}
+      </a>
+      <button class="delete" title="delete bookmark"
+        (click)="delete(bm)">x</button>
+    </li>
+  </ul>
+</div>
+
