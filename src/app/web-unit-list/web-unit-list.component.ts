@@ -27,10 +27,14 @@ export class WebUnitListComponent implements OnInit {
 
   delete(bookmark: string): void {
     console.log('called bookmark delete');
-    const index = this.model.bookmarks.indexOf(bookmark);
-    if(index >= 0) {
-      this.model.bookmarks.splice(index , 1);
-    }
+    this.bookmarkService.delete(this.loginService.getLoginedUser().id , bookmark)
+      .subscribe(() => {
+        const index = this.model.bookmarks.indexOf(bookmark);
+        if (index >= 0) {
+          this.model.bookmarks.splice(index, 1);
+        }
+      })
+
   }
 
 }
