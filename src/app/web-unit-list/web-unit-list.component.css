@@ -57,3 +57,29 @@ button.delete {
 button.delete:hover {
   background-color:#000d1f;
 }
+
+
+.add-url-container{
+  /* height: 20px; */
+  /* border: 1px solid; */
+  position: relative;
+  /* display: inline; */
+  margin-bottom: 3em;
+}
+
+.add-url-container input {
+  background-color: white;
+  color:black;
+  width: 70%;
+  height: 30px;
+  margin-right: 20px;
+  margin-left: .3em;
+}
+.add-url-container button {
+  height: 30px;
+  margin-right: 20px;
+}
+
+.button-icon{
+  height: 20px;
+}

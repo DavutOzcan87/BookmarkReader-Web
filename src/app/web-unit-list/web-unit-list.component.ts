@@ -37,4 +37,13 @@ export class WebUnitListComponent implements OnInit {
 
   }
 
+  add(url : string){
+    console.log("add" , url);
+    this.bookmarkService.add(this.loginService.getLoginedUser().id , url ).subscribe(user=>{
+      this.updateBookmarks(user.bookmarks);
+    },error=>{
+      console.log("errr" , error);
+    });
+  }
+
 }

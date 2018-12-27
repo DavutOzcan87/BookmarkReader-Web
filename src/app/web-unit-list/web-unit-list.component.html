@@ -1,4 +1,12 @@
 <div class="list-container">
+  <div class="add-url-container">
+    <input #url class="uri-input" placeholder="Enter a url to add">
+    <button (click)="add(url.value)">
+      <!-- <img class="button-icon" src="assets/favicon.ico"> -->
+      Add
+    </button>
+    <button>import</button>
+  </div>
   <ul class="bookmarks">
     <li *ngFor="let bm of model.bookmarks; let index=index">
       <a routerLink="/welcome" routerLinkActive="active">
