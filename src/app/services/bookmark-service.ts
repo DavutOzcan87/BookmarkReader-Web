@@ -24,8 +24,8 @@ export class BookmarkService {
       .pipe(map(user => user.bookmarks));
   }
 
-  add(googleId:string , url:string):Observable<UserDto> {
+  add(googleId:string , urls:string[]):Observable<UserDto> {
     let endPoint = `/api/users/${googleId}/bookmarks`;
-    return this.http.post<UserDto>(endPoint , [url]);
+    return this.http.post<UserDto>(endPoint , urls);
   }
 }

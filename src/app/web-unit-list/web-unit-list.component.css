@@ -67,7 +67,7 @@ button.delete:hover {
   margin-bottom: 3em;
 }
 
-.add-url-container input {
+.add-url-container .uri-input {
   background-color: white;
   color:black;
   width: 70%;

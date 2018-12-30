@@ -5,7 +5,7 @@
       <!-- <img class="button-icon" src="assets/favicon.ico"> -->
       Add
     </button>
-    <button>import</button>
+    <input #file id="fileBookmarkSelector" type="file" (change)="onFileChange(file)">
   </div>
   <ul class="bookmarks">
     <li *ngFor="let bm of model.bookmarks; let index=index">

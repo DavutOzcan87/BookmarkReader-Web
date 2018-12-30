@@ -38,11 +38,32 @@ export class WebUnitListComponent implements OnInit {
   }
 
   add(url : string){
-    console.log("add" , url);
-    this.bookmarkService.add(this.loginService.getLoginedUser().id , url ).subscribe(user=>{
+    console.log("adding" , url);
+    this.addAll([url]);
+  }
+
+  addAll(urls : string[]):void{
+    this.bookmarkService.add(this.loginService.getLoginedUser().id , urls ).subscribe(user=>{
       this.updateBookmarks(user.bookmarks);
     },error=>{
       console.log("errr" , error);
+    });
+  }
+
+  onFileChange(input:any) :void{
+    let file = input.files[0];
+    this.readFile(file)
+      .then(lines=>{
+        this.addAll(lines);
+      })
+      .catch(err => console.error("cannot add bookmarks" , err));
+  }
+
+  readFile(file: any):Promise<string[]>{
+    return new Promise<string[]>((resolve,reject)=>{
+      var reader = new FileReader();
+      reader.onload = (event: any)=>resolve(event.target.result.split('\n'));
+      reader.readAsText(file);
     });
   }
 
