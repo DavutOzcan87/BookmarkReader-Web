@@ -15,5 +15,5 @@ function onSignIn(googleUser) {
   };
   localStorage.setItem("googleProfile" , JSON.stringify(googleProfile));
   console.log("location" , window.location);
-  window.location = "/";
+  window.location.assign("/list-sites");
 }

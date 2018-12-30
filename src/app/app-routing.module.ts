@@ -13,7 +13,7 @@ const routes: Routes = [
   { path: 'edit-site', component: WebUnitEditComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'welcome', component: WelcomeComponent },
-  { path: '**', component: NotFoundComponent }
+  { path: '**', component: WelcomeComponent }
 ];
 
 @NgModule({
