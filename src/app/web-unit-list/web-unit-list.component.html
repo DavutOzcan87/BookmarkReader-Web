@@ -5,16 +5,17 @@
       <!-- <img class="button-icon" src="assets/favicon.ico"> -->
       Add
     </button>
-    <input #file id="fileBookmarkSelector" type="file" (change)="onFileChange(file)">
+    <!-- <input #file id="fileBookmarkSelector" type="file" class="inputfile" (change)="onFileChange(file)"> -->
+    <label for="file-upload" class="custom-file-upload"> Import
+    </label>
+    <input #file id="file-upload" type="file" (change)="onFileChange(file)" />
   </div>
   <ul class="bookmarks">
     <li *ngFor="let bm of model.bookmarks; let index=index">
       <a routerLink="/welcome" routerLinkActive="active">
         <span class="badge">{{index+1}}</span> {{bm}}
       </a>
-      <button class="delete" title="delete bookmark"
-        (click)="delete(bm)">x</button>
+      <button class="delete" title="delete bookmark" (click)="delete(bm)">x</button>
     </li>
   </ul>
 </div>
-
