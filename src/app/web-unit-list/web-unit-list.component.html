@@ -13,7 +13,7 @@
   <ul class="bookmarks">
     <li *ngFor="let bm of model.bookmarks; let index=index">
       <a routerLink="/welcome" routerLinkActive="active">
-        <span class="badge">{{index+1}}</span> {{bm}}
+        <span class="badge">{{index+1+' '+bm }}</span>
       </a>
       <button class="delete" title="delete bookmark" (click)="delete(bm)">x</button>
     </li>

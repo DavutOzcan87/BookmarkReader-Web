@@ -31,8 +31,11 @@
   color: #000d1f;
   text-decoration: none;
   width: 50vw;
+  max-width: 45vw;
   display: table-cell;
   vertical-align: middle;
+  word-wrap: break-word;
+  
 }
 
 .bookmarks a:hover {
@@ -41,6 +44,7 @@
 
 .bookmarks .badge {
   font-size: small;
+  word-wrap: break-word;
 }
 
 button.delete {
