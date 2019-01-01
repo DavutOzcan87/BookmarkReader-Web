@@ -66,6 +66,7 @@ export class WebUnitListComponent implements OnInit {
 
   onFilterChange(filter: string):void{
     console.log('filter' , filter);
+    this.model.filter(filter);
   }
 
 }
