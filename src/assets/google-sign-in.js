@@ -10,6 +10,7 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   let googleProfile = {
     id:profile.getId(),
+    name:profile.getName(),
     email:profile.getEmail(),
     imageUrl:profile.getImageUrl()
   };

@@ -12,6 +12,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { BookmarkService } from './services/bookmark-service';
 import { LoginService } from './services/login.service';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './header/header.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProfileComponent,
     NotFoundComponent,
     WelcomeComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
