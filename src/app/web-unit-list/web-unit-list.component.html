@@ -10,6 +10,7 @@
     </label>
     <input #file id="file-upload" type="file" (change)="onFileChange(file)" />
   </div>
+  <input #filter type="text" id="myInput" placeholder="Enter to filter.." (keyup)="onFilterChange(filter.value)">
   <ul class="bookmarks">
     <li *ngFor="let bm of model.bookmarks; let index=index">
       <a routerLink="/welcome" routerLinkActive="active">

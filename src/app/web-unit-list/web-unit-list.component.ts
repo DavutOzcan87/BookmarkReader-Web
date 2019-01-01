@@ -22,17 +22,14 @@ export class WebUnitListComponent implements OnInit {
   }
   updateBookmarks(bookmarks: string[]): void {
     console.log('bookmarks from service' , bookmarks);
-    this.model.bookmarks = bookmarks;
+    this.model.setBookmarks(bookmarks);
   }
 
   delete(bookmark: string): void {
     console.log('called bookmark delete');
     this.bookmarkService.delete(this.loginService.getLoginedUser().id , bookmark)
       .subscribe(() => {
-        const index = this.model.bookmarks.indexOf(bookmark);
-        if (index >= 0) {
-          this.model.bookmarks.splice(index, 1);
-        }
+        this.model.remove(bookmark);
       })
 
   }
@@ -65,6 +62,10 @@ export class WebUnitListComponent implements OnInit {
       reader.onload = (event: any)=>resolve(event.target.result.split('\n'));
       reader.readAsText(file);
     });
+  }
+
+  onFilterChange(filter: string):void{
+    console.log('filter' , filter);
   }
 
 }
