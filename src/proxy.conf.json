@@ -5,6 +5,16 @@
     "pathRewrite": {
       "^/api": ""
     },
+    "logLevel": "debug",
+    "changeOrigin": true
+  },
+  "api/": {
+    "target": "https://185.52.2.180:3080",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "logLevel": "debug",
     "changeOrigin": true
   }
 }

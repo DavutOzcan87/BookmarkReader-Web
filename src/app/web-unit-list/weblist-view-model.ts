@@ -3,7 +3,7 @@ import { map } from 'rxjs/operators';
 
 
 export class WeblistViewModel {
-  private bookmarks: string[];
+  bookmarks: string[];
   private origin: string[];
 
   remove(bookmark: string): void {
