@@ -13,19 +13,19 @@ export class BookmarkService {
 
   delete(googleId:string , bookmark: string): Observable<UserDto> {
     console.log("preparing to delete " , bookmark);
-    let url = `/api/users/${googleId}/delete-bookmarks`;
+    let url = `/backend/users/${googleId}/delete-bookmarks`;
     let request = new HttpRequest("DELETE",url,{body: [bookmark]});
     return this.http.post<UserDto>(url ,[bookmark] );
   }
 
   getBookmarks(googleId: string): Observable<string[]> {
-    const url = `/api/users/${googleId}`;
+    const url = `/backend/users/${googleId}`;
     return this.http.get<UserDto>(url)
       .pipe(map(user => user.bookmarks));
   }
 
   add(googleId:string , urls:string[]):Observable<UserDto> {
-    let endPoint = `/api/users/${googleId}/bookmarks`;
+    let endPoint = `/backend/users/${googleId}/bookmarks`;
     return this.http.post<UserDto>(endPoint , urls);
   }
 }
