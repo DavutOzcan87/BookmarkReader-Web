@@ -10,9 +10,10 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   let googleProfile = {
     id:profile.getId(),
-    name:profile.getName(),
+    name:profile.getGivenName(),
     email:profile.getEmail(),
-    imageUrl:profile.getImageUrl()
+    imageUrl:profile.getImageUrl(),
+    surname:profile.getFamilyName()
   };
   localStorage.setItem("googleProfile" , JSON.stringify(googleProfile));
   console.log("location" , window.location);

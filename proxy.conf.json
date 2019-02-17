@@ -1,6 +1,6 @@
 {
   "/backend": {
-    "target": "http://backend",
+    "target": "https://bookmarkreader.info/backend",
     "secure": false,
     "pathRewrite": {
       "^/backend": ""

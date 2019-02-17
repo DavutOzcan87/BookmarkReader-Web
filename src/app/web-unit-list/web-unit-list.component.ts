@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BookmarkService } from '../services/bookmark-service';
 import { LoginService } from '../services/login.service';
 import { WeblistViewModel } from './weblist-view-model';
+import { concatMap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-web-unit-list',
@@ -16,9 +17,11 @@ export class WebUnitListComponent implements OnInit {
 
   ngOnInit() {
     console.log('trying to read bookmarks');
-    this.bookmarkService
-    .getBookmarks(this.loginService.getLoginedUser().id)
-    .subscribe(bookmarks => this.updateBookmarks(bookmarks));
+    this.loginService.createRemoteUserIfNecessary()
+    .pipe(concatMap(user=>this.bookmarkService.getBookmarks(user.googleId)))
+    .subscribe(bookmarks => this.updateBookmarks(bookmarks) , error=>{
+        console.error("error retrieving bookmarks" , error);
+    });
   }
   updateBookmarks(bookmarks: string[]): void {
     console.log('bookmarks from service' , bookmarks);
